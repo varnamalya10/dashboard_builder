@@ -1,0 +1,434 @@
+/* Light Theme */
+.light-theme {
+  --page-bg: #f8fafc;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --navbar-bg: #ffffff;
+  --navbar-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --sidebar-bg: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-tertiary: #6b7280;
+  --text-muted: #9ca3af;
+  --border-color: #e5e7eb;
+  --primary-bg: #3b82f6;
+  --primary-hover: #2563eb;
+  --secondary-bg: #f3f4f6;
+  --secondary-hover: #e5e7eb;
+  --table-header-bg: #f9fafb;
+  --table-border: #e5e7eb;
+}
+
+/* Dark Theme */
+.dark-theme {
+  --page-bg: #111827;
+  --card-bg: #1f2937;
+  --card-border: #374151;
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --navbar-bg: #1f2937;
+  --navbar-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --sidebar-bg: #1f2937;
+  --text-primary: #000000;
+  --text-secondary: #000000;
+  --text-tertiary: #000000;
+  --text-muted: #000000;
+  --border-color: #374151;
+  --primary-bg: #3b82f6;
+  --primary-hover: #2563eb;
+  --secondary-bg: #374151;
+  --secondary-hover: #4b5563;
+  --table-header-bg: #374151;
+  --table-border: #4b5563;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+/* Apply theme variables to page background only */
+.light-theme {
+  background-color: var(--page-bg);
+}
+
+.dark-theme {
+  background-color: var(--page-bg);
+}
+
+/* Modern card styles */
+.light-theme .min-h-screen.bg-gray-50 {
+  background-color: var(--page-bg);
+}
+
+.dark-theme .min-h-screen.bg-gray-50 {
+  background-color: var(--page-bg);
+}
+
+/* Modern navbar styling */
+.light-theme .bg-white.shadow-lg {
+  background-color: var(--navbar-bg);
+  border-color: var(--border-color);
+  box-shadow: var(--navbar-shadow);
+}
+
+.dark-theme .bg-white.shadow-lg {
+  background-color: var(--navbar-bg);
+  border-color: var(--border-color);
+  box-shadow: var(--navbar-shadow);
+}
+
+/* Modern sidebar styling */
+.light-theme .w-64.bg-white {
+  background-color: var(--sidebar-bg);
+  border-color: var(--border-color);
+  box-shadow: var(--card-shadow);
+}
+
+.dark-theme .w-64.bg-white {
+  background-color: var(--sidebar-bg);
+  border-color: var(--border-color);
+  box-shadow: var(--card-shadow);
+}
+
+/* Modern widget card styling */
+.light-theme .bg-white.rounded-lg {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+  box-shadow: var(--card-shadow);
+  border-radius: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.dark-theme .bg-white.rounded-lg {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+  box-shadow: var(--card-shadow);
+  border-radius: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Force black text in white boxes for light mode */
+.light-theme .bg-white .text-gray-900,
+.light-theme .bg-white .text-gray-800,
+.light-theme .bg-white .text-gray-700,
+.light-theme .bg-white .text-gray-600,
+.light-theme .bg-white .text-gray-500 {
+  color: #000000 !important;
+}
+
+/* Keep white text in dark mode boxes */
+.dark-theme .bg-white .text-gray-900,
+.dark-theme .bg-white .text-gray-800,
+.dark-theme .bg-white .text-gray-700,
+.dark-theme .bg-white .text-gray-600,
+.dark-theme .bg-white .text-gray-500 {
+  color: var(--text-primary) !important;
+}
+
+/* Comprehensive fix for order page text visibility */
+.light-theme .text-gray-900 {
+  color: #000000 !important;
+}
+
+.light-theme .text-gray-800 {
+  color: #000000 !important;
+}
+
+.light-theme .text-gray-700 {
+  color: #000000 !important;
+}
+
+.light-theme .text-gray-600 {
+  color: #000000 !important;
+}
+
+.light-theme .text-gray-500 {
+  color: #000000 !important;
+}
+
+/* Table specific fixes */
+.light-theme table .text-gray-500,
+.light-theme table .text-gray-900,
+.light-theme .text-gray-500 td,
+.light-theme .text-gray-900 td,
+.light-theme .text-gray-500 th,
+.light-theme .text-gray-900 th {
+  color: #000000 !important;
+}
+
+/* Form elements */
+.light-theme .text-gray-700 label,
+.light-theme .text-gray-500 input,
+.light-theme .text-gray-500 select {
+  color: #000000 !important;
+}
+
+/* Status badges fix */
+.light-theme .text-green-800,
+.light-theme .text-blue-800,
+.light-theme .text-yellow-800,
+.light-theme .text-red-800 {
+  color: #000000 !important;
+}
+
+/* Modern hover effects */
+.light-theme .bg-white.rounded-lg:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: scale(1.02);
+}
+
+.dark-theme .bg-white.rounded-lg:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: scale(1.02);
+}
+
+/* Modern button styling */
+.btn-primary {
+  background-color: var(--primary-bg);
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--card-shadow);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-bg);
+  color: var(--text-primary);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid var(--border-color);
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--card-shadow);
+}
+
+/* Modern text color classes for dark mode compatibility */
+.light-theme .text-gray-900 {
+  color: var(--text-primary);
+}
+
+.dark-theme .text-gray-900 {
+  color: var(--text-primary);
+}
+
+.light-theme .text-gray-800 {
+  color: var(--text-primary);
+}
+
+.dark-theme .text-gray-800 {
+  color: var(--text-primary);
+}
+
+.light-theme .text-gray-700 {
+  color: var(--text-secondary);
+}
+
+.dark-theme .text-gray-700 {
+  color: var(--text-secondary);
+}
+
+.light-theme .text-gray-600 {
+  color: var(--text-secondary);
+}
+
+.dark-theme .text-gray-600 {
+  color: var(--text-secondary);
+}
+
+.light-theme .text-gray-500 {
+  color: var(--text-tertiary);
+}
+
+.dark-theme .text-gray-500 {
+  color: var(--text-tertiary);
+}
+
+.light-theme .text-gray-400 {
+  color: var(--text-muted);
+}
+
+.dark-theme .text-gray-400 {
+  color: var(--text-muted);
+}
+
+/* Dark mode specific fixes for text visibility */
+.dark-theme .text-black {
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .text-white {
+  color: var(--text-primary) !important;
+}
+
+/* Navbar text specifically changed to blue */
+.light-theme nav .text-gray-900,
+.light-theme nav .text-gray-800,
+.light-theme nav .text-gray-700,
+.light-theme nav .text-gray-600,
+.light-theme nav .text-gray-500 {
+  color: #3b82f6 !important;
+}
+
+.dark-theme nav .text-gray-900,
+.dark-theme nav .text-gray-800,
+.dark-theme nav .text-gray-700,
+.dark-theme nav .text-gray-600,
+.dark-theme nav .text-gray-500 {
+  color: #3b82f6 !important;
+}
+
+/* Navbar welcome message and logout text */
+.light-theme nav .text-gray-600,
+.dark-theme nav .text-gray-600 {
+  color: #3b82f6 !important;
+}
+
+/* Table styling for dark mode */
+.light-theme .bg-gray-50 {
+  background-color: var(--table-header-bg);
+}
+
+.dark-theme .bg-gray-50 {
+  background-color: var(--table-header-bg);
+}
+
+.light-theme .border-gray-200 {
+  border-color: var(--table-border);
+}
+
+.dark-theme .border-gray-200 {
+  border-color: var(--table-border);
+}
+
+.light-theme .border-gray-300 {
+  border-color: var(--table-border);
+}
+
+.dark-theme .border-gray-300 {
+  border-color: var(--table-border);
+}
+
+/* Modern border styling */
+.light-theme .border-gray-200 {
+  border-color: var(--border-color);
+}
+
+.dark-theme .border-gray-200 {
+  border-color: var(--border-color);
+}
+
+.light-theme .border-gray-300 {
+  border-color: var(--border-color);
+}
+
+.dark-theme .border-gray-300 {
+  border-color: var(--border-color);
+}
+
+/* Modern hover states */
+.light-theme .hover\:bg-gray-100:hover {
+  background-color: var(--secondary-bg);
+}
+
+.dark-theme .hover\:bg-gray-100:hover {
+  background-color: var(--secondary-bg);
+}
+
+.light-theme .hover\:text-gray-900:hover {
+  color: var(--text-primary);
+}
+
+.dark-theme .hover\:text-gray-900:hover {
+  color: var(--text-primary);
+}
+
+.light-theme .hover\:bg-gray-50:hover {
+  background-color: var(--secondary-bg);
+}
+
+.dark-theme .hover\:bg-gray-50:hover {
+  background-color: var(--secondary-bg);
+}
+
+/* Modern shadow styles */
+.light-theme .shadow-sm {
+  box-shadow: var(--card-shadow);
+}
+
+.dark-theme .shadow-sm {
+  box-shadow: var(--card-shadow);
+}
+
+.light-theme .shadow-md {
+  box-shadow: var(--card-shadow);
+}
+
+.dark-theme .shadow-md {
+  box-shadow: var(--card-shadow);
+}
+
+.light-theme .shadow-lg {
+  box-shadow: var(--card-shadow-hover);
+}
+
+.dark-theme .shadow-lg {
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Modern spacing improvements */
+.modern-spacing {
+  padding: 1rem;
+}
+
+.modern-spacing-lg {
+  padding: 1.5rem;
+}
+
+.modern-gap {
+  gap: 1rem;
+}
+
+/* Modern rounded corners */
+.modern-rounded {
+  border-radius: 0.75rem;
+}
+
+.modern-rounded-lg {
+  border-radius: 1rem;
+}
+
+/* Modern transitions */
+.modern-transition {
+  transition: all 0.2s ease-in-out;
+}
+
+.modern-transition-slow {
+  transition: all 0.3s ease-in-out;
+}
