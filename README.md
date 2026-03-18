@@ -1,4 +1,4 @@
-# Custom Dashboard Builder
+# Dashboard Builder
 
 A full-stack web application for creating dynamic, customizable dashboards with drag-and-drop widgets. Visualize customer order data using charts, tables, and KPI cards.
 
@@ -120,7 +120,7 @@ OR separately:
 
 Backend:
 cd server
-npm run dev
+npm start
 
 Frontend:
 cd client
@@ -134,6 +134,10 @@ Backend: http://localhost:5000
 
 
 ## 📡 API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - User login
 
 ### Orders
 
