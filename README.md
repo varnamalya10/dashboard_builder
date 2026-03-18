@@ -2,6 +2,11 @@
 
 A full-stack web application for creating dynamic, customizable dashboards with drag-and-drop widgets. Visualize customer order data using charts, tables, and KPI cards.
 
+## 🎥 Demo Video
+
+▶️ Click below to watch the project demo:
+
+[![Dashboard Demo](https://img.youtube.com/vi/6AtcIEjnB4g/0.jpg)](https://youtu.be/6AtcIEjnB4g)
 
 ## 🚀 Features
 
